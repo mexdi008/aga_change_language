@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Models\Post;
-use Illuminate\View\View;
-use App\Models\Translation;
-
+use App\Http\Controllers\AgaTranslateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +13,8 @@ use App\Models\Translation;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [AgaTranslateController::class, 'index']);

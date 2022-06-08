@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('aga_translates', function (Blueprint $table) {
             $table->id();
+            $table->string('page_name_az');
+            $table->string('page_name_en');
+            $table->string('page_name_ru');
+            $table->string('text_az');
+            $table->string('text_en');
+            $table->string('text_ru');
+
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('aga_translates');
     }
 };
